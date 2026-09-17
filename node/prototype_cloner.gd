@@ -28,7 +28,10 @@ func clone() -> Node:
 
 
 func detach_prototype():
-	prototype.get_parent().remove_child(prototype)
+	var parent := prototype.get_parent()
+	if parent == null:
+		return
+	parent.remove_child.call_deferred(prototype)
 
 
 func get_copies() -> Array[Node]:
