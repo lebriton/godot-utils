@@ -32,7 +32,7 @@ static func to_vector3(v: Variant) -> Vector3:
 	if v is Vector3i:
 		return Vector3(v)
 	if v is Vector2:
-		return Vector3(v, 0.0)
+		return Vector3(v.x, v.y, 0.0)
 	if v is Vector2i:
 		return Vector3(v.x, v.y, 0)
 	return Vector3.ZERO
